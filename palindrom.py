@@ -6,6 +6,12 @@ class Solution:
         
         if len(s) == 1:
             return s
+        
+        if len(s) == 2:
+            if s[0] != s[1] :
+                return s[0]
+            else:
+                return s
        
         for index1 in range(0, len(s)):
             repeater = s[index1]
@@ -22,12 +28,7 @@ class Solution:
 
                 if repeater[0] == repeater.strip()[-1] :
                     palidrome = repeater if len(repeater) > len(palidrome) else palidrome
-                    break
-            
-
-            if repeater[0] != repeater.strip()[-1] :
-                palidrome = repeater[0] if len(repeater[0]) > len(palidrome) else palidrome
-
+                    # break
         
         return palidrome
 
@@ -35,7 +36,7 @@ class Solution:
 def main():
     objSolution = Solution()
 
-    print(objSolution.longestPalindrome("aacabdkacaa"))
+    print(objSolution.longestPalindrome("au"))
 
 
 if __name__  == "__main__":
