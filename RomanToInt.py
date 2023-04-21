@@ -16,7 +16,7 @@ class Solution:
             roman_split = temp_split[1]
         
         if "XC" in roman_split :
-            temp_split = roman_split.split("CD")
+            temp_split = roman_split.split("XC")
             print(roman_split)
             print(temp_split)
             total += self.addRoman(temp_split[0])
@@ -24,19 +24,19 @@ class Solution:
             roman_split = temp_split[1]
         
         if "XL" in roman_split :
-            temp_split = roman_split.split("CD")
+            temp_split = roman_split.split("XL")
             total += self.addRoman(temp_split[0])
             total += 40
             roman_split = temp_split[1]
 
         if "IX" in roman_split :
-            temp_split = roman_split.split("CD")
+            temp_split = roman_split.split("IX")
             total += self.addRoman(temp_split[0])
             total += 9
             roman_split = temp_split[1]
         
         if "IV" in roman_split :
-            temp_split = roman_split.split("CD")
+            temp_split = roman_split.split("IV")
             total += self.addRoman(temp_split[0])
             total += 4
             roman_split = temp_split[1]
