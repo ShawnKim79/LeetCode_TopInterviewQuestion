@@ -17,8 +17,6 @@ class Solution:
         
         if "XC" in roman_split :
             temp_split = roman_split.split("XC")
-            print(roman_split)
-            print(temp_split)
             total += self.addRoman(temp_split[0])
             total += 90
             roman_split = temp_split[1]
